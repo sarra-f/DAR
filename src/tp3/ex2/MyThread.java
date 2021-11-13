@@ -10,7 +10,7 @@ public class MyThread extends Thread{
     @Override
     public void run() {
         //todo: implement the methods and uncomment the lines below
-        //StaticCounter.increment();
-        //counter.count();
+        StaticCounter.increment();
+        counter.count();
     }
 }
