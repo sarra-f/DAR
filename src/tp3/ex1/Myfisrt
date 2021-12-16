@@ -1,0 +1,7 @@
+package ex1;
+
+public class Myfisrt extends Thread{
+    public void run(){
+        System.out.println("my thread is running 1");
+    }
+}
