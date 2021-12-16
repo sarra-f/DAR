@@ -1,4 +1,5 @@
-package tp4;
+package TP4;
+
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -9,7 +10,7 @@ public class Server {
     static final int port = 1200;
 
     public static void main(String[] args) throws Exception {
-
+        String x,x1;
         // Listen to a specific port
 
         ServerSocket serverSocket = new ServerSocket(port);
@@ -22,9 +23,10 @@ public class Server {
         PrintWriter outServer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socClient.getOutputStream())), true);
 
         // Read message sent by the client
-        inServer.readLine();
+        x=inServer.readLine();
+        x1=x.toUpperCase();
         // Write message to the client
-        System.out.println("something");
+        outServer.println(x1);
 
         // ****** if you're using DataInputStream & DataOutputStream ******
 
@@ -47,3 +49,4 @@ public class Server {
         serverSocket.close();
     }
 }
+
