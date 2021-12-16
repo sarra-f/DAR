@@ -1,7 +1,6 @@
-package tp3.ex3;
+package ex3;
 
 public class Main {
-
     // in this assignment we will simulate a vendor that sells an isi sandwich
     // and a student that waits for a sandwich until it's prepared
     // implement the student and the vendor run methods in order to get a correct output
