@@ -1,8 +1,6 @@
-package tp2;
-
+package number;
 import java.util.Scanner;
-
-public class CorrectNumberFormat {
+public class number {
 
     public static void main(String[] args) {
         System.out.println("Enter a number");
@@ -13,12 +11,14 @@ public class CorrectNumberFormat {
         String line = scanner.nextLine();
 
         //convert it to number
-        int num = Integer.parseInt(line);
+        try {
+            int num = Integer.parseInt(line);
+            System.out.println("it's a number");
+        } catch(NumberFormatException e){
+            System.out.println("it's not a number");
+        }
 
         // todo print the answer based on the input
 
-        System.out.println("It's a number :)");
-
-        System.out.println("It's not a number :(");
     }
 }
