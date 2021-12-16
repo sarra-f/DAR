@@ -1,7 +1,6 @@
-package tp3.ex3;
+package ex3;
 
 public class Vendor extends Thread{
-
     private ISISandwich isiSandwich;
 
     public Vendor(String s, ISISandwich isiSandwich) {
@@ -10,13 +9,20 @@ public class Vendor extends Thread{
     }
 
     @Override
-    public void run() {
+    public void run(){synchronized (isiSandwich) {
+
         try {
             sleep(2000);
-                System.out.println("Vendor "+this.getName()+" said 'isi sandwich is ready'");
-                //todo : prepare a sandwich, set it as ready and notify a student
+            isiSandwich.setReady(true);
+            isiSandwich.notify();
+            System.out.println("Vendor "+this.getName()+" said 'isi sandwich is ready'");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+
+
+
+
     }
-}
+}}
